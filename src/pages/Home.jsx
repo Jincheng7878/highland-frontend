@@ -1,4 +1,6 @@
 // src/pages/Home.jsx
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <section>
@@ -8,17 +10,17 @@ function Home() {
           <div className="Hero-tagline">Paisley Highland Games</div>
           <h1 className="Hero-title">Welcome to the Games</h1>
           <p className="Hero-subtitle">
-            A fictional Highland Games event used as the basis for the COMP10020
-            coursework. This prototype shows how roles and competition
-            applications could be managed online.
+            A fictional Highland Games event. This prototype shows how roles and
+            competition applications could be managed online.
           </p>
           <div className="Hero-buttons">
-            <a href="/jobs" className="Btn Btn-primary">
+            {/* ✅ 用 Link 代替 a */}
+            <Link to="/jobs" className="Btn Btn-primary">
               View Event Roles
-            </a>
-            <a href="/apply" className="Btn Btn-ghost">
+            </Link>
+            <Link to="/apply" className="Btn Btn-ghost">
               Apply to Compete
-            </a>
+            </Link>
           </div>
         </div>
       </div>
